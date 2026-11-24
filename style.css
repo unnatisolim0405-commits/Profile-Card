@@ -1,0 +1,188 @@
+/* ---------- Basic reset ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* ---------- Page layout (Flexbox centering) ---------- */
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(135deg, #4b6cb7, #7b4397);
+}
+
+/* ---------- Theme buttons ---------- */
+.theme-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.theme-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #1f2a3a;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* ---------- Card (dark mode by default) ---------- */
+.card {
+    width: 100%;
+    max-width: 370px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #1f2a3a;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.card-top {
+    padding: 40px 30px 30px;
+    text-align: center;
+}
+
+/* ---------- Avatar ---------- */
+.avatar {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #2dd4bf;
+    margin-bottom: 20px;
+}
+
+/* Dark mode: show dark image, hide light image */
+.avatar-dark {
+    display: inline-block;
+}
+
+.avatar-light {
+    display: none;
+}
+
+/* ---------- Text ---------- */
+.name {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.bio {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #a0b0c8;
+    margin-bottom: 25px;
+}
+
+.bio a {
+    color: #2dd4bf;
+}
+
+/* ---------- Contact button ---------- */
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background-color: #33415c;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.contact-btn img {
+    width: 18px;
+    height: 18px;
+}
+
+/* ---------- Social icons section ---------- */
+.card-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #151d2b;
+}
+
+.card-bottom a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #33415c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-bottom img {
+    width: 18px;
+    height: 18px;
+}
+
+/* ================================================= */
+/* ---------- LIGHT MODE (parent selectors) -------- */
+/* ================================================= */
+
+body.light-mode .page {
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+}
+
+body.light-mode .theme-buttons button {
+    background-color: white;
+    color: #1f2a3a;
+}
+
+body.light-mode .card {
+    background-color: white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .name {
+    color: #1f2a3a;
+}
+
+body.light-mode .bio {
+    color: #5a6b85;
+}
+
+body.light-mode .bio a {
+    color: #7b4397;
+}
+
+body.light-mode .avatar {
+    border-color: #7b4397;
+}
+
+body.light-mode .contact-btn {
+    background-color: #7efdf1;
+    color: #1f2a3a;
+}
+
+body.light-mode .card-bottom {
+    background-color: #7efdf1;
+}
+
+body.light-mode .card-bottom a {
+    background-color: #a2fee9;
+}
+
+/* Light mode: swap which avatar is shown */
+body.light-mode .avatar-dark {
+    display: none;
+}
+
+body.light-mode .avatar-light {
+    display: inline-block;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page">
+
+        <!-- Theme buttons -->
+        <div class="theme-buttons">
+            <button onclick="setLight()">Light</button>
+            <button onclick="setDark()">Dark</button>
+        </div>
+
+        <!-- Profile card -->
+        <div class="card">
+
+            <div class="card-top">
+                <img src="dark.jpg" alt="Profile picture" class="avatar avatar-dark">
+                <img src="light.jpg" alt="Profile picture" class="avatar avatar-light">
+
+                <h1 class="name">Unnati Solim</h1>
+
+                <p class="bio">
+                  BSc IT student passionate about web development and creative design.
+                  I enjoy building modern, responsive, and user-friendly websites.
+                  Always exploring
+                  <a href="https://developer.mozilla.org" target="_blank">new technologies</a>
+                  and transforming ideas into beautiful digital experiences.
+                </p>
+                <a href="mailto:aarav@example.com" class="contact-btn">
+                    <img src="icons/email.svg" alt="Email icon">
+                    Get in touch
+                </a>
+            </div>
+
+            <div class="card-bottom">
+                <a href="https://tiktok.com" target="_blank"><img src="icons/tiktok.svg" alt="TikTok"></a>
+                <a href="https://instagram.com" target="_blank"><img src="icons/instagram.svg" alt="Instagram"></a>
+                <a href="https://twitter.com" target="_blank"><img src="icons/twitter.svg" alt="Twitter"></a>
+                <a href="https://example.com" target="_blank"><img src="icons/website.svg" alt="Website"></a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
